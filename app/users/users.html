@@ -1,0 +1,17 @@
+<md-toolbar md-scroll-shrink ng-if="true">
+    <div class="md-toolbar-tools">
+        <h3>
+            <span>angularjs-hubber-pro</span>
+        </h3>
+    </div>
+</md-toolbar>
+<md-list>
+    <md-list-item ng-repeat="user in data.users">
+        <p> {{ user.name }} </p>
+        <md-button class="md-raised md-primary" ng-click="openEdit($index)">Edit</md-button>
+    </md-list-item>
+</md-list>
+<div>
+    <md-button class="md-raised" ng-class="{'md-primary': data.currentPage == $index}" ng-repeat="p in data.pages track by $index" ng-click="changePage($index)">
+        {{$index + 1}}</md-button>
+</div>

@@ -1,0 +1,10 @@
+<md-dialog>
+    <md-dialog-content>
+        <md-list>
+            <md-list-item ng-repeat="todo in data.todos">
+                <p>{{ todo.title }}</p>
+                <md-checkbox class="md-secondary" ng-model="todo.completed"></md-checkbox>
+            </md-list-item>
+        </md-list>
+    </md-dialog-content>
+</md-dialog>
